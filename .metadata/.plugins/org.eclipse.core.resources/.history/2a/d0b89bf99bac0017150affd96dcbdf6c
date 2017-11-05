@@ -1,0 +1,21 @@
+package com.inprogress;
+
+public class Neuron {
+	
+	private double weight;
+
+	public Neuron() {
+		super();
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+	
+
+}

@@ -1,0 +1,33 @@
+package com.inprogress;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class ImageHandle {
+	
+	static File input = new File("");
+	
+	BufferedImage image;
+	int width;
+	int height;
+	
+	
+	public ImageHandle() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void toGrayScale(BufferedImage image) {
+		
+	}
+
+
+	public static void main(String[] args) throws IOException {
+		
+		//BufferedImage image = ImageIO.read(ImageHandle.class.getResource(""));
+		BufferedImage image = ImageIO.read(input);
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Dog rashad = new Dog();
+		rashad.bark();
+	}
+
+}

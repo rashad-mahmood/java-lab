@@ -1,0 +1,29 @@
+package com.inprogress;
+
+import org.jblas.DoubleMatrix;
+
+public class NeuralNetwork {
+	
+	int inputLayerSize;
+	int hiddenLayerSize;
+	int outputLayerSize;
+	DoubleMatrix w1;
+	DoubleMatrix w2;
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+		this.inputLayerSize = inputLayerSize;
+		this.hiddenLayerSize = hiddenLayerSize;
+		this.outputLayerSize = outputLayerSize;
+	}
+	
+	public void init() {
+		
+	}
+	
+	public void forwardPropagation(DoubleMatrix input) {
+		
+	}
+	
+
+}

@@ -1,0 +1,74 @@
+package com.intact.eCMCCMPSMeeting;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.io.FileUtils;
+
+public class CSV {
+	public static void main(String[] args) {
+		
+	}
+	private ArrayList<Record> records = new ArrayList<Record>();
+	
+	public ArrayList<Record> getRecords(String fileName) {
+		File csvFile = new File(fileName);
+		String readFileToString;
+		CSVParser parser = null;
+		
+		try {
+			readFileToString = FileUtils.readFileToString(csvFile);
+			parser = CSVParser.parse(readFileToString, CSVFormat.DEFAULT);
+		} catch (IOException e) {
+			System.out.println("Error getting CSV Parser.");
+			e.printStackTrace();
+		}
+		
+		int rowNum = 0;
+		
+		for (CSVRecord csvRecord : parser) {
+			int colNum = 0;
+			if (rowNum == 0) {
+				while (i < csvRecord.size()) {
+					String header = csvRecord.get(i);
+					if (header.equals("Incident ID")) {
+						String incidentIdHeader = header;
+						int incidentIdCol = i;
+					} else if (header.equals("Title")) {
+						String titleHeader = header;
+						int titleCol = i;
+					} else if (header.equals("Assignee")) {
+						String assigneeHeader = header;
+						int assigneeCol = i;
+					} else if (header.equals("Assignment Group")) {
+						String assignmentGroupHeader = header;
+						int assignmentGroupId = i;
+					} else if (header.equals("Open Time")) {
+						String openTimeHeader = header;
+						int openTimeCol = i;
+					} else if (header.equals("Solution")) {
+						String solutionHeader = header;
+						int solutionCol = i;
+					} else if (header.equals("Update Action")) {
+						String updateActionHeader = header;
+						int updateActionCol = i;
+					}
+					i++;
+				}
+				
+				
+				
+			} else {
+				
+			}
+			
+		}
+		
+		return records;
+	}
+
+}

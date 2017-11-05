@@ -1,0 +1,26 @@
+package com.inprogress;
+
+import java.util.AbstractCollection;
+import java.util.List;
+
+public class NeuralNetwork {
+	
+	Neuron[] input;
+	Neuron[] hidden;
+	Neuron[] output;
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+		this.input = new Neuron[inputLayerSize];
+		this.hidden = new Neuron[hiddenLayerSize];
+		this.output = new Neuron[outputLayerSize];
+	}
+	
+	public void popLayer(Neuron[] layer) {
+		for (int i  = 0; i < layer.length ; i++) {
+			input[i] = new Neuron();
+		}
+	}
+	
+
+}

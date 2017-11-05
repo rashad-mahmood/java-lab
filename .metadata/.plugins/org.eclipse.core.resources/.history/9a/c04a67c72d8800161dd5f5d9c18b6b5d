@@ -1,0 +1,47 @@
+package com.intact.eCMCCMPSMeeting;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.io.FileUtils;
+
+public class CSV {
+	public static void main(String[] args) {
+		
+	}
+	private ArrayList<Record> records = new ArrayList<Record>();
+	
+	public ArrayList<Record> getRecords(String fileName) {
+		File csvFile = new File(fileName);
+		String readFileToString;
+		CSVParser parser = null;
+		
+		try {
+			readFileToString = FileUtils.readFileToString(csvFile);
+			parser = CSVParser.parse(readFileToString, CSVFormat.DEFAULT);
+		} catch (IOException e) {
+			System.out.println("Error getting CSV Parser.");
+			e.printStackTrace();
+		}
+		
+		int rowNum = 0;
+		
+		for (CSVRecord csvRecord : parser) {
+			int colNum = 0;
+			if (rowNum == 0) {
+				String header = csvRecord.get(colNum);
+				
+			} else {
+				
+			}
+			
+		}
+		
+		return records;
+	}
+
+}

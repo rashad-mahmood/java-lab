@@ -1,0 +1,10 @@
+package com.inprogress;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Graph<T> {
+	
+	Map<Integer, T> nodeMap = new HashMap<Interger, T>();
+
+}

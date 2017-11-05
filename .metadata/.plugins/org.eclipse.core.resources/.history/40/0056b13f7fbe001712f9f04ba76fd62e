@@ -1,0 +1,21 @@
+package com.inprogress;
+
+import org.jblas.DoubleMatrix;
+
+public class MatrixHandle {
+	public static void main(String[] args) {
+		double[][] data = new double[][] {
+			{1, 1, 1, 1},
+			{0, 0, 0, 0},
+			{1, 0, 1, 0}
+		};
+		
+		DoubleMatrix matrix = new DoubleMatrix(data);
+		DoubleMatrix vector = new DoubleMatrix(new double[]{1, 0, 0, 0});
+		DoubleMatrix result = matrix.mmul(vector);
+		System.out.println(matrix.rows + "x" + matrix.columns + ":" + matrix);
+		System.out.println(vector.rows + "x" + vector.columns + ":" + vector);
+		System.out.println(result.rows + "x" + result.columns + ":" + result);
+	}
+
+}

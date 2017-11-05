@@ -1,0 +1,36 @@
+package com.archive;
+
+public class Math {
+	
+	public static void main(String[] args) {
+		//sumOfMultiples(3, 5, 1000);
+		long start = System.nanoTime();
+		sumOfEven(4000000);
+		long end = System.nanoTime() - start;
+		System.out.println("Run Time: " + end + "ns " + (float) end/1000000 + "ms " + (float) end/1000000000 + "s " + (float) end/1000000000/60 + "min.");
+	}
+
+	private static void sumOfMultiples(int mul1, int mul2, int max) {
+		int result = 0;
+		for (int i = 1; i < max; i++) {
+			int mod1 = i % mul1;
+			int mod2 = i % mul2;
+			if (mod1 == 0 || mod2 == 0) {
+				result += i;
+				System.out.println(i + "is a multiple of " + mul1 + " or " + mul2);
+			}
+		}
+		System.out.println("Sum of multiples of " + mul1 + " or " + mul2 + " under " + max + " is " + result) ;
+	}
+	
+	private static void sumOfEven(int max) {
+		long result = 0;
+		for (int i = 1; i < max; i++) {
+			if ((i%2) == 0) {
+				result += i;
+				System.out.println("( +" + i + ")" + result);
+			}
+		}
+		System.out.println("Sum of even fibonaci sequence under " + max + " is " + result) ;
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/commons-csv-1.4/commons-csv-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/commons-csv-1.4/commons-csv-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/commons-io-2.5/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/commons-io-2.5/commons-io-2.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/joda-time-2.4/joda-time-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/joda-time-2.4/joda-time-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/joda-time-2.4/joda-time-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-examples-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rasha/workspace/BankExportAnalyzer/poi-3.15/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

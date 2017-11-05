@@ -1,0 +1,19 @@
+package com.inprogress;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Graph<T> {
+	
+	private Map<Integer, T> nodeMap = new HashMap<Integer, T>();
+
+	public Graph() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void add(T node) {
+		
+	}
+
+}

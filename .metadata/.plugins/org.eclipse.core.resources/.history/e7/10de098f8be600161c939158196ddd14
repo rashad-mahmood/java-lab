@@ -1,0 +1,20 @@
+
+public class Dog {
+	
+	private String colour = "blue";
+	private int age;
+	
+	
+	
+	public Dog(String colour, int age) {
+		super();
+		this.age = age;
+	}
+
+
+
+	public void bark() {
+		System.out.println("Bark!");
+	}
+
+}

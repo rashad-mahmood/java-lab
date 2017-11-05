@@ -1,0 +1,13 @@
+package com.inprogress;
+
+public class Neuron {
+	
+	private double weight;
+
+	public Neuron() {
+		super();
+	}
+	
+	
+
+}

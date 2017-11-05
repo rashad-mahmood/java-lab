@@ -1,0 +1,9 @@
+
+public class Example {
+	
+	public static void main(String[] args) {
+		Example a = new Example();
+		a.
+	}
+
+}

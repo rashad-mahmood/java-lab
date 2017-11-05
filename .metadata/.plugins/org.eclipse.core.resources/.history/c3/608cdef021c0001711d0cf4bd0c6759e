@@ -1,0 +1,18 @@
+package com.inprogress;
+
+public class NeuralNetwork {
+	
+	int inputLayerSize;
+	int hiddenLayerSize;
+	int outputLayerSize;
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+		this.inputLayerSize = inputLayerSize;
+		this.hiddenLayerSize = hiddenLayerSize;
+		this.outputLayerSize = outputLayerSize;
+	}
+	
+	
+
+}

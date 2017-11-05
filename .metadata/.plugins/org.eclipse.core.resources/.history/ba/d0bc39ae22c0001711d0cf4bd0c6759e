@@ -1,0 +1,35 @@
+package com.inprogress;
+
+import org.jblas.DoubleMatrix;
+
+public class NeuralNetwork {
+	
+	Sigmoid activation = new Sigmoid();
+	
+	int inputLayerSize;
+	int hiddenLayerSize;
+	int outputLayerSize;
+	DoubleMatrix w1;
+	DoubleMatrix w2;
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+		this.inputLayerSize = inputLayerSize;
+		this.hiddenLayerSize = hiddenLayerSize;
+		this.outputLayerSize = outputLayerSize;
+	}
+	
+	public void init() {
+		
+	}
+	
+	public DoubleMatrix forwardPropagation(DoubleMatrix input) {
+		DoubleMatrix hidden = input.mmul(w1);
+		DoubleMatrix activatedHidden = activation.sigmoid(hidden);
+		DoubleMatrix output = activatedHidden.mmul(w2);
+		DoubleMatrix sigmoid = activation.sigmoid(output);
+		return activatedOutput;
+	}
+	
+
+}

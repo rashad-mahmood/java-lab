@@ -1,0 +1,15 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Dog rashad = new Dog("red", 2);
+		rashad.bark();
+		System.out.println(rashad.getAge());
+		System.out.println(rashad.getColour());
+		rashad.setAge(5);
+		rashad.setColour("blue");
+		System.out.println(rashad.getAge());
+		System.out.println(rashad.getColour());
+	}
+
+}

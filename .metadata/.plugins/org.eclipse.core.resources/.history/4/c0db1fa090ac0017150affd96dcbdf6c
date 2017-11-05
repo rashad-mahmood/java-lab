@@ -1,0 +1,40 @@
+package com.inprogress;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class ImageHandle {
+	
+	BufferedImage image;
+	int width;
+	int height;
+
+	public static void toGrayScale() throws IOException {
+		BufferedImage image = ImageIO.read(new File(""));
+		int width = image.getWidth();
+		int height = image.getHeight();
+		
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				Color color = new Color(image.getRGB(j, i));
+				int red = (int) (color.getRed() * 0.299); // find out why 0.299, same for blue & green
+				int blue = (int) (color.getBlue() * 0.587);
+				int green = (int) (color.getGreen() * 0.114);
+				int gray = red + blue + green;
+				Color grayColor = new Color(gray, gray, gray);
+			}
+		}
+	}
+
+
+	public static void main(String[] args) throws IOException {
+		
+		//BufferedImage image = ImageIO.read(ImageHandle.class.getResource(""));
+		BufferedImage image = ImageIO.read(input);
+	}
+
+}

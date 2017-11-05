@@ -1,0 +1,14 @@
+package com.inprogress;
+
+public class Neuron {
+	
+	private double weight;
+
+	public Neuron(double weight) {
+		super();
+		this.weight = weight;=
+	}
+	
+	
+
+}

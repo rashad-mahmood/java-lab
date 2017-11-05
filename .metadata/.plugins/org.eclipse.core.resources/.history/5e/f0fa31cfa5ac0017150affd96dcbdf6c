@@ -1,0 +1,28 @@
+package com.inprogress;
+
+import java.util.List;
+
+public class Neuron {
+	
+	private double input;
+	private double weight;
+	private double output = input * weight;
+
+	public Neuron() {
+		super();
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	@Override
+	public String toString() {
+		return "Neuron [weight=" + weight + "]";
+	}
+
+}

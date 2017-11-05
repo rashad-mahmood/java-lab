@@ -1,0 +1,12 @@
+
+public class Dog {
+	
+	private String colour;
+	private int age;
+	
+	
+	public void bark() {
+		System.out.println("Bark!");
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.inprogress;
+
+import java.util.AbstractCollection;
+
+public class NeuralNetwork {
+	
+	int inputLayerSize;
+	int hiddenLayerSize;
+	int outputLayerSize;
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+		this.inputLayerSize = inputLayerSize;
+		this.hiddenLayerSize = hiddenLayerSize;
+		this.outputLayerSize = outputLayerSize;
+	}
+	
+	public void createNetwork() {
+		for (int i  = 0; i < inputLayerSize; i++) {
+			Neuron in = new Neuron();
+			for (int h = 0; i < hiddenLayerSize; h++) {
+				Neuron hn = new Neuron();
+				
+			}
+		}
+	}
+	
+
+}

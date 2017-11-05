@@ -1,0 +1,9 @@
+package com.inprogress;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		ImageHandle im = new ImageHandle();
+	}
+
+}

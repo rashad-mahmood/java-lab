@@ -1,0 +1,17 @@
+package com.inprogress;
+
+public class NeuralNetwork {
+	
+	
+	public NeuralNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {
+		super();
+	}
+	
+	public void popLayer(Neuron[] layer) {
+		for (int i  = 0; i < layer.length ; i++) {
+			input[i] = new Neuron();
+		}
+	}
+	
+
+}
