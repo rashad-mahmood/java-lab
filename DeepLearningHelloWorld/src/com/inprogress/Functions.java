@@ -11,7 +11,7 @@ import org.jblas.MatrixFunctions;
  * @author rasha
  *
  */
-public class Sigmoid {
+public class Functions {
 	
 	public static void main(String[] args) {
 		double[][] data = new double[][] {
@@ -20,8 +20,8 @@ public class Sigmoid {
 			{1, 0, 1, 20}
 		};
 		
-		Sigmoid sig = new Sigmoid();
-		DoubleMatrix sigmoid1 = sig.sigmoid(new DoubleMatrix(data));
+		Functions sig = new Functions();
+		DoubleMatrix sigmoid1 = sig.sigmoidJblas(new DoubleMatrix(data));
 		DoubleMatrix sigmoid2 = sig.sigmoidJblas(new DoubleMatrix(data));
 		System.out.println(sigmoid1);
 		System.out.println(sigmoid2);
@@ -33,7 +33,7 @@ public class Sigmoid {
 	 * @param t
 	 * @return
 	 */
-	public double sigmoid(double t) {
+	public static double sigmoid(double t) {
 		return 1 / (1 + Math.exp(-t));
 	}
 	
@@ -43,7 +43,7 @@ public class Sigmoid {
 	 * @param t
 	 * @return
 	 */
-	public DoubleMatrix sigmoid(DoubleMatrix t) {
+	public static DoubleMatrix sigmoid(DoubleMatrix t) {
 		DoubleMatrix output = new DoubleMatrix(t.rows, t.columns);
 		double value;
 		double sigval;
@@ -58,9 +58,22 @@ public class Sigmoid {
 		return output;
 	}
 	
-	public DoubleMatrix sigmoidJblas(DoubleMatrix t) {
+	public static DoubleMatrix sigmoidJblas(DoubleMatrix t) {
 		DoubleMatrix res = (MatrixFunctions.expi(t.muli(-1))).addi(1);
 		return res.rdivi(1);
 	}
-
+	
+	/**
+	 * 
+	 * S(t) = 1 / (1 + e^(-1))
+	 * 
+	 * S'(t) = S(t)*(1 - S(t))
+	 * 
+	 * @param t
+	 * @return
+	 */
+	public static DoubleMatrix sigmoidJblasDerivateA(DoubleMatrix t) {
+		return sigmoidJblas(t).mmul(sigmoidJblas(t).addi(-1));
+	}
+	
 }
